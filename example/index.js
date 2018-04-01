@@ -10,7 +10,10 @@ const actions = {
 };
 
 const view = (state, actions) => (
-  <Slider state={state.slider} actions={actions.slider} />
+  <div>
+    <div>Value: {state.slider.value}</div>
+    <Slider state={state.slider} actions={actions.slider} />
+  </div>
 );
 
 devtools(app)(state, actions, view, document.querySelector('#app'));
