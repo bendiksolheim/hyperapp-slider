@@ -4,7 +4,7 @@ Slider/range component for [Hyperapp](https://github.com/hyperapp/hyperapp).
 
 ## Usage
 
-```
+```jsx
 import { h, app } from 'hyperapp';
 import { Slider } from 'hyperapp-slider';
 
