@@ -1,13 +1,13 @@
 {
   "name": "hyperapp-slider",
   "version": "0.0.1",
-  "description": "",
-  "main": "index.js",
+  "description": "Slider/range component for Hyperapp",
+  "main": "src/index.js",
   "scripts": {
     "watch": "parcel example/index.html"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": ["hyperapp", "slider", "hyperapp-slider", "range"],
+  "author": "Bendik Solheim",
   "license": "ISC",
   "dependencies": {},
   "devDependencies": {
@@ -15,5 +15,9 @@
     "hyperapp": "^1.2.5",
     "hyperapp-redux-devtools": "^1.1.6",
     "parcel-bundler": "^1.7.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bendiksolheim/hyperapp-slider"
   }
 }
