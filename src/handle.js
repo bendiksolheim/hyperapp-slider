@@ -22,10 +22,9 @@ const onMouseDown = setMovementX => e => {
 };
 
 const Handle = ({ cls, min, max, value, setMovementX }) => {
-  const offset = value / (max - min) * 100;
   const style = {
     position: 'absolute',
-    left: `${offset}%`
+    left: `${value}px`
   };
 
   return (

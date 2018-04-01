@@ -22,7 +22,7 @@ function Slider({ baseClass, state, actions, onChange }) {
         cls={cls}
         min={state.min}
         max={state.max}
-        value={state.value}
+        value={state.dom.value}
         setMovementX={actions.setMovementX}
       />
     </div>
