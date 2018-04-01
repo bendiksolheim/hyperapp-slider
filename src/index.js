@@ -10,7 +10,13 @@ function Slider({ baseClass, state, actions, onChange }) {
   const cls = !isUndefined(baseClass) ? baseClass : 'slider';
 
   return (
-    <div class={cls}>
+    <div
+      class={cls}
+      role="slider"
+      aria-valuemin={state.min}
+      aria-valuemax={state.max}
+      aria-valuenow={state.value}
+    >
       <Track cls={cls} setWidth={actions.setDomWidth} />
       <Handle
         cls={cls}
