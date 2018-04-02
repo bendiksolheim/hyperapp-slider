@@ -1,6 +1,7 @@
 import { h } from 'hyperapp';
 import { Handle } from './handle';
 import { Track } from './track';
+import { Fill } from './fill';
 
 function isUndefined(v) {
   return typeof v === 'undefined';
@@ -18,6 +19,7 @@ function Slider({ baseClass, state, actions, onChange }) {
       aria-valuenow={state.value}
     >
       <Track cls={cls} setWidth={actions.setDomWidth} />
+      <Fill cls={cls} value={state.dom.value} />
       <Handle
         cls={cls}
         min={state.min}
