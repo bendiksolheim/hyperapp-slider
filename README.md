@@ -26,7 +26,7 @@ const view = (state, actions) => (
 app(state, actions, view, document.body);
 ```
 
-There is no default styling. You can style based on the classes `.slider`, `.slider__track` and `.slider__handle`. Alternatively, you can passe your own "base" class with `baseClass="my-slider"` and get `.my-slider`, `.my-slider__track` and `.my-slider__handle`.
+There is no default styling. You can style based on the classes `.slider`, `.slider__track`, `slider__fill` and `.slider__handle`. Alternatively, you can passe your own "base" class with `baseClass="my-slider"` and get `.my-slider`, `.my-slider__track`, `my-slider__fill` and `.my-slider__handle`.
 
 See `example/index.html` and `example/index.js` for a working example.
 
