@@ -56,9 +56,9 @@ Slider.actions = {
     actions.dom.setValue(newDomValue);
   },
   setDomWidth: width => (state, actions) => {
-    actions.dom.setWidth(width);
     const ratio = (state.value - state.min) / (state.max - state.min);
     const domValue = ratio * width;
+    actions.dom.setWidth(width);
     actions.dom.setValue(domValue);
   },
   dom: {
