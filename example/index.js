@@ -3,7 +3,7 @@ import { Slider } from '../src';
 import devtools from 'hyperapp-redux-devtools';
 
 const state = {
-  slider: Slider.state({ min: 20, max: 60, value: 50 }),
+  slider: Slider.state({ min: 20, max: 60, value: 50, step: 3 }),
   sliderTwo: Slider.state({ min: 120, max: 122, value: 121 })
 };
 const actions = {
