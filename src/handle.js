@@ -14,14 +14,23 @@ const onMouseUp = e => {
   eventContainer.removeEventListener('mouseup', mouseUpHandler);
 };
 
-const onMouseDown = setMovementX => e => {
+const onMouseDown = (setMovementX, setInitialMousePosition) => e => {
   mouseMoveHandler = onMouseMove(setMovementX);
   mouseUpHandler = onMouseUp;
   eventContainer.addEventListener('mousemove', mouseMoveHandler);
   eventContainer.addEventListener('mouseup', mouseUpHandler);
+
+  setInitialMousePosition();
 };
 
-const Handle = ({ cls, min, max, value, setMovementX }) => {
+const Handle = ({
+  cls,
+  min,
+  max,
+  value,
+  setMovementX,
+  setInitialMousePosition
+}) => {
   const style = {
     position: 'absolute',
     left: `${value}px`
@@ -32,7 +41,7 @@ const Handle = ({ cls, min, max, value, setMovementX }) => {
       class={`${cls}__handle`}
       tabIndex="0"
       style={style}
-      onmousedown={onMouseDown(setMovementX)}
+      onmousedown={onMouseDown(setMovementX, setInitialMousePosition)}
     />
   );
 };
