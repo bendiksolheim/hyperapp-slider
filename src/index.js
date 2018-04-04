@@ -62,6 +62,16 @@ Slider.actions = {
       min(state.max, valueAtMousePosition)
     );
 
+    if (state.step === 'any') {
+      const newDomValue =
+        (clampedValueAtMousePosition - state.min) /
+        (state.max - state.min) *
+        state.dom.width;
+      actions.setValue(clampedValueAtMousePosition);
+      actions.dom.setValue(newDomValue);
+      return;
+    }
+
     const valueDiff = clampedValueAtMousePosition - state.value;
     if (abs(valueDiff) >= state.step / 2) {
       const step = state.step * round(valueDiff / state.step);
