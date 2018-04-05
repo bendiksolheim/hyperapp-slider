@@ -38,10 +38,10 @@ The slider is configured through the `Slider.state` function. It returns your co
 
 | Property | Type       | Mandatory | Default | Explanation       |
 |----------|------------|-----------|---------|-------------------|
-| min      | Int        | Yes       |         | The minimum value |
-| max      | Int        | Yes       |         | The maximum value |
-| value    | Int        | Yes       |         | The initial value |
-| step     | Int/String | No        | 1       | The value added or subtracted to `value` per tick. Set to a number for a discrete slider, or 'any' for a continuous slider |
+| `min`    | Int        | Yes       |         | The minimum value |
+| `max`    | Int        | Yes       |         | The maximum value |
+| `value`  | Int        | Yes       |         | The initial value |
+| `step`   | Int/String | No        | 1       | The value added or subtracted to `value` per tick. Set to a number for a discrete slider, or `'any'` for a continuous slider |
 
 ## Development
 
