@@ -9,7 +9,7 @@ import { h, app } from 'hyperapp';
 import { Slider } from 'hyperapp-slider';
 
 const state = {
-    mySlider: Slider.state({min: 0, max: 100, value: 50})
+    mySlider: Slider.state({min: 0, max: 100, value: 50, step: 1})
 };
 
 const actions = {
