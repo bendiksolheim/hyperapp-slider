@@ -32,6 +32,16 @@ See `example/index.html` and `example/index.js` for a working example.
 
 **NOTE:** don’t update values owned by hyperapp-slider manually, things will get out of sync.
 
+## Configuration
+
+The slider is configured through the `Slider.state` function. It returns your configured state for the slider, and should be put in your global state object. It accepts the following properties.
+
+Property | Type       | Mandatory | Default | Explanation
+----------------------------------------------------
+min      | Int        | Yes       | -       | The minimum value
+max      | Int        | Yes       | -       | The maximum value
+value    | Int        | Yes       | -       | The initial value
+step     | Int|String | No        | 1       | The value added or subtracted to `value` per tick. Set to a number for a discrete slider, or 'any' for a continuous slider
 
 ## Development
 
