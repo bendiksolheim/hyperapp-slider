@@ -2,6 +2,10 @@
 
 Slider/range component for [Hyperapp](https://github.com/hyperapp/hyperapp).
 
+## Installation
+
+`npm install --save hyperapp-slider`
+
 ## Usage
 
 ```jsx
