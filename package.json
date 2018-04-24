@@ -2,19 +2,47 @@
   "name": "hyperapp-slider",
   "version": "0.0.1",
   "description": "Slider/range component for Hyperapp",
-  "main": "src/index.js",
+  "main": "lib/hyperapp-slider.js",
+  "module": "es/hyperapp-slider.js",
+  "files": [
+    "dist",
+    "lib",
+    "es",
+    "src"
+  ],
   "scripts": {
-    "watch": "parcel example/index.html"
+    "clean": "rm -r lib dist es",
+    "watch": "parcel example/index.html --out-dir build",
+    "build:commonjs": "NODE_ENV=cjs rollup -c -o lib/hyperapp-slider.js",
+    "build:es": "BABEL_ENV=es NODE_ENV=es rollup -c -o es/hyperapp-slider.js",
+    "build:umd": "BABEL_ENV=umd NODE_ENV=development rollup -c -o dist/hyperapp-slider.js",
+    "build:umd:min": "BABEL_ENV=es NODE_ENV=production rollup -c -o dist/hyperapp-slider.min.js",
+    "build": "npm run build:commonjs && npm run build:es && npm run build:umd && npm run build:umd:min",
+    "prepare": "npm run clean && npm run build"
   },
-  "keywords": ["hyperapp", "slider", "hyperapp-slider", "range"],
+  "keywords": [
+    "hyperapp",
+    "slider",
+    "hyperapp-slider",
+    "range"
+  ],
   "author": "Bendik Solheim",
   "license": "ISC",
   "dependencies": {},
   "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.26.0",
     "babel-preset-env": "^1.6.1",
     "hyperapp": "^1.2.5",
     "hyperapp-redux-devtools": "^1.1.6",
-    "parcel-bundler": "^1.7.0"
+    "parcel-bundler": "^1.7.0",
+    "rollup": "^0.58.2",
+    "rollup-plugin-babel": "^3.0.4",
+    "rollup-plugin-replace": "^2.0.0",
+    "rollup-plugin-uglify": "^3.0.0"
+  },
+  "peerDependencies": {
+    "hyperapp": "^1.2.5"
   },
   "repository": {
     "type": "git",
